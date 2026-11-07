@@ -1,0 +1,25 @@
+label	seed	exit	seconds	built	crash_report
+default	101	2	154	30000/30000 pipelines	none
+nvs1	102	0	344	20000/20000 pipelines	none
+cap-flush24	1001	143	170	2500/10000 pipelines	none
+cap-flush100	2001	0	43	5000/5000 pipelines	none
+cap-flush100	2002	0	53	5000/5000 pipelines	none
+cap-flush100-nvs1	2003	0	66	5000/5000 pipelines	none
+cap-flush100-nvs1	2004	0	63	5000/5000 pipelines	none
+cap-flush100-shared	2005	0	52	5000/5000 pipelines	none
+cap-flush100-shared	2006	0	104	5000/5000 pipelines	none
+cap-flush100-concurrent	2007	139	56	500/5000 pipelines	~/Library/Logs/DiagnosticReports/repro-2026-11-07-171435.ips
+cap-flush100-concurrent	2008	139	1	0	~/Library/Logs/DiagnosticReports/repro-2026-11-07-171449.ips
+cap-flush5000	2009	0	34	5000/5000 pipelines	none
+cap-flush5000	2010	0	35	5000/5000 pipelines	none
+cap-spec-always	2011	0	53	5000/5000 pipelines	none
+cap-spec-always	2012	0	65	5000/5000 pipelines	none
+cap-24threads	2013	0	81	5000/5000 pipelines	none
+cap-24threads	2014	0	78	5000/5000 pipelines	none
+serial-same-vertex	2015	0	157	5000/5000 pipelines	none
+serial-same-vertex	2016	0	249	5000/5000 pipelines	none
+no-capture	2017	0	26	5000/5000 pipelines	none
+no-capture	2018	0	38	5000/5000 pipelines	none
+unspec-flush100	3001	0	107	8000/8000 pipelines	none
+unspec-flush100	3002	0	146	8000/8000 pipelines	none
+unspec-nvs1-flush100	3003	0	46	2000/2048 pipelines	none

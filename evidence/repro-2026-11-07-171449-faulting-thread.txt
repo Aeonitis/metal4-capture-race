@@ -1,0 +1,20 @@
+# repro crash, 2026-11-07 17:14:49.00 +0100, Mac14,6, macOS 27.2 (26B123)
+# run: 2008 (cap-flush100-concurrent)
+exception: EXC_BAD_ACCESS (SIGSEGV) KERN_INVALID_ADDRESS at 0x0000000000000030
+faulting thread 19 (com.apple.MTLCompilerConnectionQueue)
+ 0  libdispatch.dylib      dispatch_data_create_map + 32
+ 1  Metal                  -[_MTLBinaryArchive(MTLBinaryArchiveInternal) newArchiverIdWithBinaryKey:entry:srcArchiverId:functionType:] + 152
+ 2  Metal                  __122-[MTLCompiler compileFunctionRequestInternal:frameworkLinking:linkDataSize:reflectionOnly:compilerTask:completionHandler:]_block_invoke + 988
+ 3  Metal                  invocation function for block in MTLCompilerScheduler::buildRequest(unsigned int, std::__1::shared_ptr<MTLCompilerRequest>, bool, objc_object*, void (MTLCompilerError, NSObject<OS_dispatch_data>*, char const*) block_pointer) + 92
+ 4  Metal                  invocation function for block in MTLSchedulerRequest::generateXPCBlock(qos_class_t, int) + 2116
+ 5  libdispatch.dylib      _dispatch_client_callout + 16
+ 6  libdispatch.dylib      _dispatch_block_invoke_direct + 284
+ 7  Metal                  invocation function for block in MTLCompilerScheduler::createBlockWithData(std::__1::shared_ptr<MTLSchedulerRequest>) + 44
+ 8  libdispatch.dylib      _dispatch_block_async_invoke2 + 148
+ 9  libdispatch.dylib      _dispatch_client_callout + 16
+10  libdispatch.dylib      _dispatch_lane_serial_drain + 744
+11  libdispatch.dylib      _dispatch_lane_invoke + 448
+12  libdispatch.dylib      _dispatch_root_queue_drain_deferred_wlh + 284
+13  libdispatch.dylib      _dispatch_workloop_worker_thread + 720
+14  libsystem_pthread.dylib _pthread_wqthread + 292
+15  libsystem_pthread.dylib start_wqthread + 8
